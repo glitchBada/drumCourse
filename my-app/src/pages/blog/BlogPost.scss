@@ -1,0 +1,49 @@
+.blogPage{
+    padding: 0 85px;
+    .celebrations{
+        color:red;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+    .blog-container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .blog-post{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .post-image{
+                width: 100%;
+                height: 250px;
+            }
+            .post-date{
+                width: 100%;
+                text-align: end;
+            }
+            .post-content{
+                text-align: justify;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1024px){
+    .blogPage{
+        padding: 80px 20px;
+        .blog-container{
+            .blog-post{
+                .post-image{
+                    width: 100%;
+                    height: auto;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+

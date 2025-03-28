@@ -1,0 +1,457 @@
+.sectionsoffirstpage{
+    position: relative;
+    padding: 82px;
+}
+.sec1{
+    
+    h1{
+        z-index: 3;
+        width: 700px;
+        font-size: 49px;
+        font-weight: 300;
+        // padding-bottom: 70px;
+        span{
+            color: red;
+            font-weight: 700;
+        }
+        
+    }
+    button{
+        background-color: red;
+        color: white;
+        border: none;
+        padding:18px 25px;
+        font-size: 23px;
+    }
+    
+}
+.mapandform{
+    display: flex;
+    margin-left: 84px;
+}
+.drumFirstPic{
+    content: "";
+    // background-image: url(../../imgs/drumFirstPic.png);
+    position: absolute;
+    z-index: -1;
+    width: 850px;
+    height: 870px;
+    right: -79px;
+    top: -28px;
+}
+.Drums{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 400px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    font-size: 360px;
+    font-weight: 700;
+    color: #ffffff08;
+
+}
+.sec2{
+    margin-top: 100px;
+    .textOfSec2{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+       
+        .text{
+            display: flex;
+            flex-direction: column;
+        }
+        .text1{
+            font-size: 18px;
+            position: relative;
+            width: 508px;
+            align-items: center;
+            margin-bottom: 100px;
+            &::after{
+                content: '';
+                border: solid 1px red;
+                width: 240px;
+                position: absolute;
+                left: 500px; 
+                top: 97px;
+            }
+            h2{
+                font-size: 50px;
+                padding: 0;
+                margin: 0;
+                span{
+                    color: red;
+                    font-weight: 100;
+                }
+            }
+            p{
+                span{
+                    color: red;
+                }
+            }
+        }
+        .text2{
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 29px;
+                padding: 0;
+                li{
+                    font-size: 24px;
+                    position: relative;
+                    padding-left: 50px;
+                    list-style: none;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        border: solid 0 red;
+                        width: 20px;
+                        height: 20px;
+                        background-color: red;
+                        border-radius: 100%;
+                        font-weight: 900;
+                        top: 6px;
+                        left: 0px;
+                    }
+                }
+            }
+        }
+        .MaratPhoto{
+            position: absolute;
+            content: '';
+            right: -100px;
+            width: 680px;
+            height: 871px;
+        }
+        .displayNone{
+            display: none;
+        }
+    }
+}
+.sec3{
+    position: relative;
+    padding-bottom: 0;
+    h2{
+        font-size: 42px;
+        margin-left: 50px;
+        margin-bottom: 150px;
+        span{
+            color: red;
+            font-weight: 400;
+        }
+    }
+    .whywe{
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .whypoints{
+
+            display: flex;
+            width: 220px;
+            justify-content: space-between;
+            .imagesforpoints{
+                flex-direction: column;
+                height: 330px;
+                // align-items: ;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // width: 20%;
+                img{
+                    // width: 100px;
+                    // top: 0;
+                    // height: 100px;
+                    padding: 0 0 10px;
+                    margin: 0;
+                }
+                .whytext{
+                    h4{
+                        text-align: center;
+                        padding: 0;
+                        margin: 0;
+                        // bottom: 0;
+                    }
+                    p{
+                        color: gray;
+                        text-align: center;
+                        padding: 0;
+                        margin-bottom: 0;
+                        margin-top: 20px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.sec4{
+    z-index: 0;
+    margin: 198px 0 0 0;
+    background-image: url(../../imgs/background1.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    // filter:opacity(10%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 150px 0;
+    .textof4sec{
+        background-color: rgba(0, 0, 0, 0.405);
+        padding: 10px;
+        box-shadow: inset black 0px 0px 20px 5px;
+        border-radius: 20%;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            text-align: center;
+            font-size: 87px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p{
+            width: 200px;
+            text-align: center;
+            color: red;
+        }
+    }   
+}
+.caruselllll{
+    background-image: url('../../imgs/background1.png');
+    background-position: center;
+    background-size: cover;
+    display: none;
+    height: 200px;
+}
+.sec5{
+    .sertVariants{
+        width: 100%;
+        justify-content: center ;
+        display: flex;         
+        flex-wrap: wrap;   
+        gap: 144px;
+        .variant{
+            img{
+                margin-bottom: 30px;
+            }
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            width: auto;
+            gap: 20px;
+            .varh1{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                h4{
+                    font-size: 19px;
+                    text-align: center;
+                    padding: 0;
+                    margin: 0;
+                    span{
+                        color:red;
+                        font-weight:100;
+                    }
+                }
+            }
+            .varP{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                // width: 140px;
+                p{
+                    font-size: 18px;
+                    font-weight: 100;
+                    padding: 0;
+                    margin: 0;
+                    text-align: center;
+                    // width: 230px;
+                }
+            }
+            
+        }
+
+    }
+    
+}
+
+
+@media screen and (max-width: 1250px) {
+    .sectionsoffirstpage{
+        padding: 20px;
+    }
+    .sec1{height: 350px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        h1{
+            // scale: 0.5;
+            z-index: 2;
+            width: 160px;
+            font-size: 20px;
+            // font-weight: 300;
+            padding: 0px;
+            margin-right: auto;
+            span{
+                color: red;
+                font-weight: 700;
+            }
+            
+        }
+        button{
+            width: auto;
+            padding:10px 15px;
+            margin-top: 250px;
+            font-size: 15px;
+        }
+        
+    }
+    .drumFirstPic{
+        position: absolute;
+        z-index: -1;
+        scale: 0.4;
+        right: -309px;
+        top: -208px;
+    }
+    .Drums{
+        transform: rotate(90deg);
+        top:0;
+        height: auto;
+        font-size: 20px;
+    }
+    .mapandform{
+margin: 20px;
+    }
+    .sec2{
+        margin-top: 20px;
+        .textOfSec2{
+            height: auto;
+            .MaratPhoto{
+                // top: 0;
+                // z-index: -1;
+                // width: 160px;
+                // height: 200px;        
+                // // right: 30%;
+                // // left: 50%;
+                display: none;
+            }
+            .displayNone{
+                display: block;
+                width: 160px;
+                height: 190px;
+                // filter: brightness(150%);
+                right: auto;     
+                top: 30px;
+
+            }
+            .text1{
+                width: auto;
+                // height: 250px;
+                font-size: 10px;
+                margin: 0;
+                h2{
+                    font-size: 30px;
+                }
+                &::after{
+                    border: none;
+                }
+            }
+            .text2{
+                margin-top: 10px;
+                ul{
+                    height: auto;
+                    gap: 10px;
+                    li{
+                        padding-left: 20px;
+                        // height: 100%;
+                        font-size: 15px;
+                        &::before{
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sec3{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2{
+            text-align: center;
+            font-size: 35px;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        .whywe{
+            justify-content: center;
+            gap: 45px;
+            .whypoints{
+                .imagesforpoints{
+                    height:auto;
+                    img{
+                        scale: 0.75;
+                    }
+                    .whytext{
+                        h4{
+
+                        }
+                        p{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sec4{
+        margin-top: 0;
+        display:none;
+    }
+    .caruselllll{
+        display:block;
+        padding-top: 13%;
+    }
+    .sec5{
+        .sertificate{
+            text-align:center;
+            span{
+                color:red;
+                font-weight:100;
+            }
+        }
+        .sertVariants{
+            gap:55px;
+            .variant{
+                width:250px;
+                img{
+                    height:145px;
+                    margin:0;
+                }
+                .varp{
+                    flex-direction: row;
+                    flex-wrap:wrap;
+                }
+            }
+        }
+    }
+    
+}

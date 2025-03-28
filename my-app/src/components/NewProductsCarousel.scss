@@ -1,0 +1,31 @@
+.Novinki{
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+.newslider{
+    margin-bottom: 20px;
+    .slick-dots li button::before {
+        font-size: 16px;
+        color: rgb(133, 0, 0);
+        opacity: 0.7;
+      }
+      .slick-dots li.slick-active button::before {
+        color: red;
+      }
+    .slick-list{
+        // margin: 0 85px;
+        a{
+            display: flex !important;
+            justify-content: center;
+            .newProduct-image{
+                border-radius: 20px;
+                border: 2px solid red;
+                box-shadow: 0 0 50px -10px  red;
+                width: 90%;
+                height: auto;
+            }
+        }
+        
+    }
+}

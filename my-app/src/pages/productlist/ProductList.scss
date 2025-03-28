@@ -1,0 +1,223 @@
+.product-list {
+    padding: 75px;
+    .NashAsortiment{
+      margin: 30px 0;
+    }
+  }
+  .categorylist-and-searching{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+    select{
+      background-color: #ffffff00;
+      option{
+        background-color: black;
+        color: red;
+      }
+    }
+
+    .category-list{
+
+      justify-content: center;
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      li{
+        text-transform:capitalize;
+        padding: 5px;
+        padding-top: 3px;
+        background-color: red;
+      }
+    }
+    .searching{
+      border-radius: 20px;
+      display: flex;
+      input{
+        background-color: rgba(255, 255, 255, 0);
+        padding: 5px;
+        height: 30px;
+        border-bottom: solid 2px red !important;
+        &::placeholder{
+          color: gray;
+        }
+        color: white;
+        border: none;
+      }
+      button{
+        margin: 0 0 0 10px;
+        padding: 5px 10px ;
+        background-color: rgb(255, 0, 0);
+        border: none;
+        
+      }
+    }
+    .selectcategory{
+      border: none;
+      text-transform: uppercase;
+      border-bottom: red solid 3px;
+
+    }
+
+    .slick-prev{
+      z-index: 9;
+    }
+    .slick-prev:before {
+      
+      color: red;
+    }
+    .slick-next:before{
+      color: red;
+    }
+  .brand-slider{
+    .slick-list{
+      span{
+        color: black;
+      }
+      margin: 0 100px;
+      background-color: white;
+    }
+    .brand-item{
+      .brand-logo{
+        height: 100%;
+        width: auto;
+      }     
+      width: auto !important;
+      display: flex !important;
+      justify-content: center;
+      .slick-track{
+        padding: 0 100px;
+      }
+    }
+    .brand-item{
+      width: auto;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+    }
+    
+  }
+  
+  .product-grid {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 85px; 
+    gap: 20px;
+    // margin: 0;
+    // box-shadow: inset 0 0 60px 50px black;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../../imgs/kirpich_stena_tekstura_192138_1280x720.jpg) center/cover;
+      background-repeat: repeat;
+      filter: brightness(0.6);
+      z-index: -1;
+      box-shadow: inset 0 0 60px 50px black;
+    }
+  }
+  
+  .product-card {
+    background-color: black;
+    width: 220px;
+    border: 2px solid rgb(135, 2, 2);
+    box-shadow: 0 0 50px -20px rgb(168, 0, 0);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .prodctsh3{
+      font-size: 18px;
+      text-transform: uppercase;
+      color: red;
+    }
+    .linkend{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: end;
+      
+      .productdetails{width: 100%;
+        color: white;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        border-radius: 10px;
+        font-size: 15.5px;
+        background-color: red;
+        animation: bosshadow infinite 1s ;
+        margin: 20px 0 0 0;
+      }
+    }
+    .product-image {
+      // box-shadow: inset 0 0 0 10px rgb(247, 0, 0);
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+      border-radius: 20px;
+    }
+  }
+  
+  
+  select {
+    margin: 10px 0;
+    padding: 5px;
+    color: red;
+  }
+
+@keyframes bosshadow{
+  0%{
+    box-shadow: 0 0 20px -1px red;
+  }
+  50%{
+    box-shadow: 0 0 20px -5px red;
+  }
+  100%{
+    box-shadow: 0 0 20px -1px red;
+  }
+}
+
+
+
+
+
+
+@media (max-width:1024px){
+  .product-list{
+    padding: 40px !important;
+    .product-grid {
+      padding: 0;
+      justify-content: center;
+      &::before{
+        background-size: contain;
+      }
+      .product-card{
+        width: 260px;
+        box-shadow: 0 0 50px -25px red;
+      }
+    }
+  .slick-list{
+    margin: 0;
+  }
+  }
+}
+
+@media (max-width:780px){
+  .product-list{
+    padding: 80px 10px;
+    .categorylist-and-searching{
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+}

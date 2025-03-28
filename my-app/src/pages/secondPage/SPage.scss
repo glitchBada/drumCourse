@@ -1,0 +1,226 @@
+.sectionsof2page{
+    position: relative;
+    padding: 82px;
+}
+
+.sec21{
+    // margin-top: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 900px;
+    .stuudy{
+        z-index: 2;
+        font-size: 150px;
+        span{
+            color: red;
+        }
+    }
+    .redgradient{
+        position: absolute;
+        right: 80px;
+        z-index: -1;
+        width: 900px;
+        height: 900px;
+        background: rgb(255,0,0);
+        background: radial-gradient(circle, rgb(180, 50, 50) 10%, rgba(0, 0, 0, 0) 60%);
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        animation: heartBeat infinite 5s;
+        
+    }
+    .druum{
+        position: absolute;
+        right: 80px;
+        z-index: 9;
+        width: 900px;
+        height: 910px;
+        background-image: url(../../imgs/baunsieDrum.png);
+        animation: heartBeat infinite 5s;
+        background-size: 100%;
+        // background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+
+        a{
+            img{
+                width: 250px;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+            }
+        }
+        
+    }
+    .startStudy{  
+        position: absolute;
+        top: 570px;
+        left: 82px;
+        background-color: red;
+        color: white;
+        border: none;
+        padding:18px 25px;
+        font-size: 23px;
+    }
+
+}
+.sec22{
+    height: 660px;
+    width: 100%;
+    background-image: url(../../imgs/background2.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    h2{
+        font-size: 40px;
+        margin: 0 0 30px 40px;
+        span{
+            color: red;
+            font-weight: 400;
+        }
+    }
+    .textpage2{
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 25px;
+    }
+}
+.sec23{
+    h2{
+        font-size: 40px;
+        margin-bottom: 60px;
+        span{
+            color: red;
+            font-weight: 300;
+        }
+    }
+    .programs{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        row-gap: 30px;
+        .program{
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .programimg{
+                height: 150px;
+            }
+            .programtext{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                h4{
+                    font-size: 25px;
+                }
+                p{
+                    color: gray;
+                }
+            }
+        }
+    }
+    
+}
+
+@keyframes heartBeat{
+    0%{
+        scale: 0.85;
+    }
+    2%{
+        scale: 0.9;
+    }
+    4%{
+        scale: 0.85;
+    }
+    6%{
+        scale: 0.9;
+    }
+    8%{
+        scale:0.85;
+    }
+    10%{
+        scale: 0.9;
+    }
+    12%{
+        sccale: 0.85;
+    }
+    12.5%{
+        scale: 0.85;
+    }
+    50%{
+        scale:0.85;
+    }
+    
+    52%{
+        scale: 0.9;
+    }
+    54%{
+        scale:0.85;
+    }
+    58%{
+        scale: 0.9;
+    }
+    60%{
+        scale: 0.85;
+    }
+    100%{
+        scale: 0.85;
+    }
+
+}
+
+@media (max-width:1250px) {
+.sec21{
+    height: 250px;
+    align-items: normal;
+    margin: 50px;
+    justify-content: center;
+    .stuudy{
+        margin-top: 20PX;
+        font-size: 30px;
+        height: 40px;
+    }
+    .redgradient, .druum{
+        width: 200px;
+        height: 200px;
+        top: 60px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        
+    }
+    .druum{
+        z-index: auto;
+        // width: 200px;
+        // height: 200px;
+        a{
+            img{
+                width: 100px;
+            }
+        }
+    }
+    button{
+        display: none;
+    }
+}
+.sec22{
+    h2{
+        margin: 0;
+    }
+    .textpage2{
+        width: auto;
+        font-size: 17px;
+    }
+}
+}

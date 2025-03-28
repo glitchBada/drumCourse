@@ -1,0 +1,98 @@
+.teacherspage{
+    align-items: center;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    .titleTeachers{
+        width: 100%;
+        h1{
+            font-size: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            span{
+                color: red;
+                font-weight: 100;    
+            }
+
+        }
+    }
+    .aboutteachers{
+        margin: 20px 0;
+        p{
+            text-transform: uppercase;
+
+        }
+    }
+    .youtubeplayer{
+        width: 900px;
+        margin: 0 0 50px;
+        height: 200px;
+        // border-radius: 25px;
+        // border: solid 3px red;
+        // box-shadow: 0 0 30px 4px red;
+    }
+    .cards{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .theachers{
+            // border-radius: 28px;
+            // box-shadow: 0 0 30px -5px  red;
+            padding: 8px;
+            // border: solid 2px red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 290px;
+            img{
+                border-radius: 20px;
+                width: 100%;
+            }
+            h2{
+                color: red;
+            }
+            p{
+                text-align: center;
+            }
+            .smartphonr {
+                margin: 10px;
+                border-radius: 10PX;
+                display: flex;
+                gap: 10px;
+                font-size: 18px;
+                padding:7px 10px 10px;
+                color: red;
+                transition: 200ms;
+                svg{
+                    width: 23px !important;
+                    height: 25px !important;
+                }
+                path{
+                    transition: 200ms;
+                    fill: red !important;
+                    
+                }
+            }
+            .smartphonr:hover {
+                color: white;
+                background-color: red;
+                path{
+                    fill: white !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .teacherspage{
+        padding: 80px 10px;
+    .youtubeplayer{
+        width: 100%;
+        // border-radius: 20px;
+    }
+    }
+}

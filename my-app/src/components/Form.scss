@@ -1,0 +1,110 @@
+.Form{background-color: #00000000;
+    width: 675px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: end;
+    h2{
+        margin: 30px 0;
+        span{
+            color: red;
+            font-weight: 100;
+        }
+    }
+    form{
+        position: relative;
+        display:flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        row-gap: 10px;
+        justify-content: flex-end;
+        align-content: end;
+        div{
+            padding: 0;
+            margin: 0;
+            input{
+                height: 50px;
+                padding: 0;
+                margin: 0;
+                color: white;
+                border: none;
+                border-bottom: 2px gray solid;
+                background-color: #00000000;
+                width: 312px;
+                margin: 0;
+            }
+        }
+        .textarea{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            input{
+                // position: relative;
+                // height: 50px;
+                // display: flex;
+                // align-items: center;
+                // padding: 0;
+                // margin: 0;
+                // resize: none;
+                // min-width: 100%;
+                // color: white;
+                // border: none;
+                // border-bottom: 2px gray solid;
+                // background-color: #00000000;
+                // &::-webkit-input-placeholder{
+                //     color:gray;
+                //     position: absolute;
+                //     content: "";
+                //     top:35%;
+                // }
+                height: 50px;
+                padding: 0;
+                margin: 0;
+                color: white;
+                border: none;
+                border-bottom: 2px gray solid;
+                background-color: #00000000;
+                width: 100%;
+                margin: 0;
+            }
+        }
+        .submitbutton{
+            // justify-self: right;
+            // margin-right: 0px;
+            background-color: red;
+            font-size: 21px;
+            border: 0;
+            padding: 15px 15px;
+            margin-top: 30px;
+
+        }
+    }
+    
+}
+
+
+
+
+@media (max-width: 1250px){
+    .Form{
+        h2{
+            text-align: center;
+            span{
+                
+            }
+        }
+        form{
+            justify-content: center;
+            div{
+                width: 100%;
+                input{
+                    width: 100%;
+                }
+            }
+            .textarea{
+                input{
+                    
+                }
+            }
+        }
+    }
+}

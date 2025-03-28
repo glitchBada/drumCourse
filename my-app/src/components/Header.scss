@@ -1,0 +1,119 @@
+$mobile-breakpoint: 1250px;
+$burger-size: 30px;
+$bar-height: 3px;
+$animation-time: 0.3s;
+$menu-width: 300px;
+$shadow: 2px 0 5px rgba(0,0,0,0.2);
+
+
+
+.Hheader{
+  overflow: hidden;
+    position: relative;
+    z-index: 3;
+    margin: 30px 88px 0px 56px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo{
+      overflow: hidden;
+      width: auto;
+      .imglogo{
+        width: auto;
+        height: 130px;
+      }
+        
+    }
+
+    .headMenu{
+        // z-index: 3;
+        // position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 83%;
+        margin: 0 0 0 56.5px;
+        gap: 20px;
+
+        .headerlinks{
+            color: gray;
+            font-size: 19px;
+        }
+
+        .firstheaderlayer{
+            display: flex;
+            justify-content: space-between;
+            font-weight: 300;
+
+            .firstlayerlinks{
+                
+                display: flex;
+                align-items: center;
+                p{
+                    color: gray;
+                    margin: 0;
+                    padding: 0 0 0 10px;
+                }
+            }
+
+          
+        }
+
+        .secondheaderlayer{
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+
+            .linktomarket{
+                color: #a40606;
+            }
+        }
+    }
+  }
+
+  
+  @media (min-width: 1251px) {
+    .Hheader{
+      position: static;
+
+    }
+  }
+
+    @media (max-width: 1024px) {
+      .Hheader{
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        position: fixed;    
+        height: 80px;
+        margin: 0;
+        padding: 20px;
+
+        display: flex;
+        justify-content: space-between;
+          // flex-wrap: wrap;
+          .logo{
+            
+            // padding: 40px 50px 0 ;
+            // scale: 0.5;
+            width: auto;
+            height: 70px;
+            .imglogo{
+              padding: 0;
+              margin: 0;
+              width: auto;
+              height: 70px;
+            }
+          }
+          .headMenu{
+            display: none;
+              .firstheaderlayer{
+                  flex-wrap: wrap;
+              }
+          }
+      }
+
+    }
