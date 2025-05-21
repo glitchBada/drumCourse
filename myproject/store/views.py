@@ -1,7 +1,6 @@
 from rest_framework import generics
 from .models import Category, Product, Brand
 from .serializers import CategorySerializer, ProductSerializer, BrandSerializer
-# from python_telegram_bot import Bot
 import telegram
 from django.db.models import Q
 import requests
@@ -90,14 +89,4 @@ class ApplicationView(APIView):
         except Exception as e:
             print(f"Error sending to Telegram: {str(e)}")
 
-        # Return success response
         return Response({'status': 'Заказ успешно отправлен на расмотрение. Скоро с вами свяжется продавец.'})
-# views.py
-# from .models import Category, Product
-from .serializers import CategorySerializer, ProductSerializer
-
-# from rest_framework.views import APIView
-# from rest_framework.response import Response
-# from django.conf import settings
-# import requests
-
