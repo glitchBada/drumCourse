@@ -11,7 +11,7 @@ return (
     <>
         <div className="teacherspage">
             <div className="titleTeachers">
-                <h1>наши педо<span>гоги</span></h1>
+                <h1>наши <span>педогоги</span></h1>
             </div>
             <div className="aboutteachers">
                 <p>Lorem ipsum dolor sit amet.</p>
@@ -26,30 +26,30 @@ return (
                     <img className="cardpicture" src={Maratcardphoto} alt="" />
                     <h2>Марат Миндубаев</h2>
                     <p>34 года, Очень любит професионально играть на барабанах, отжигать на вечеринках. Характер веселый. Не женат.</p>
-                    <a href="#" className="smartphonr">
+                    {/* <a href="#" className="smartphonr">
                         <FontAwesomeIcon className="smartphoneicon" icon={faWhatsapp} color="red"/>
                         Телефон
-                    </a>
+                    </a> */}
 
                 </div>
                 <div className="theachers zuteach">
                     <img className="cardpicture" src={Zucardphoto} alt="" />
                     <h2>ZU ...</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsam debitis nobis dolores explicabo deleniti harum, voluptates nisi perferendis temporibus, quia, culpa maxime dicta quidem sunt mollitia quibusdam nam voluptas error doloribus est iste?</p>
-                    <a href="#" className="smartphonr">
+                    {/* <a href="#" className="smartphonr">
                         <FontAwesomeIcon className="smartphoneicon" icon={faWhatsapp} color="red"/>
                         Телефон
-                    </a>
+                    </a> */}
 
                 </div>
                 <div className="theachers alinateach">
                     <img className="cardpicture" src={Alinacardphoto} alt="" />
                     <h2>Алина ...</h2>
                     <p>Очень хорошая память, особенно помнит опечатки в отзывах, особено "бараны"</p>
-                    <a href="#" className="smartphonr">
+                    {/* <a href="#" className="smartphonr">
                         <FontAwesomeIcon className="smartphoneicon" icon={faWhatsapp} color="red"/>
                         Телефон
-                    </a>
+                    </a> */}
 
                 </div>
             </div>

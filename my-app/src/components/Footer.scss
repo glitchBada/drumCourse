@@ -21,6 +21,15 @@
                     // padding: 0 0 0 10px;
                 }
     }
+
+    .logo{
+        overflow: hidden;
+        width: auto;
+        .imglogo{
+          width: auto;
+          height: 130px;
+        }
+    }  
 }
 
 @media (max-width: 1250px){

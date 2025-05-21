@@ -1,4 +1,4 @@
-import Logo from '../imgs/logo.png'
+import Logo from '../imgs/Drum_courses_white.png'
 import "./Footer.scss"
 import Facebook from '../imgs/facebook.png'
 import Youtube from '../imgs/youtube.png'
@@ -12,7 +12,7 @@ function Footer() {
       <>
         <div className="footer">
             <div className="logo">
-                <img src={Logo} alt="" />
+                <img className='imglogo' src={Logo} alt="" />
             </div>
             <div className="social">
                 <a href="https://youtu.be/dQw4w9WgXcQ?si=kcl3lWqiZ_QQLxa3">

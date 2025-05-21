@@ -25,21 +25,24 @@ const BlogPosts = () => {
     return (
         <>
         <div className='blogPage'>
-            <h1 className='celebrations'>События нашей школы</h1>
+            <h1 className='celebrations'>События <span>нашей школы</span></h1>
             <div className="blog-container">
                 {posts.map(post => (
                     <div key={post.id} className="blog-post">
-                        <h2>{post.title}</h2>
-                        {post.images && (
-                            <img 
-                                src={`http://192.168.43.61:8000${post.images}`} 
-                                alt={post.title}
-                                className="post-image"
-                            />
-                        )}
-                        <p className="post-content">
-                            {post.content}
-                        </p>
+                        <h2 className='postTitle'>{post.title}</h2>
+                        <div className='imgandcontent'>
+                            {post.images && (
+                                <img 
+                                    src={`http://192.168.43.61:8000${post.images}`} 
+                                    alt={post.title}
+                                    className="post-image"
+                                />
+                            )}
+                            <p className="post-content">
+                                {post.content}
+                            </p>
+                        </div>
+                        
                         <p className="post-date">
                             {new Date(post.pub_date).toLocaleDateString()}
                         </p>

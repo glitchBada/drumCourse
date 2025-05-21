@@ -160,8 +160,11 @@ function FirstHomePage() {
               </div>
               </div>
           </div>
-          
-        </section>
+          <div className="googlemapdiv">
+            <h2>где мы <span>находимся</span></h2>
+            <iframe className="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.6517789322197!2d74.62216837613406!3d42.83796897115239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb700ff74cd47%3A0x47c0e23a895c793a!2sDrum%20Courses!5e0!3m2!1sru!2skg!4v1744253091378!5m2!1sru!2skg" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          </section>
         </div>
       </>
     );

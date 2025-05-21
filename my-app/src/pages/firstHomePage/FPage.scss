@@ -283,6 +283,30 @@
         }
 
     }
+    .googlemapdiv{
+        margin-top: 35px;
+        h2{
+            margin-bottom: 20px;
+            color: red;
+            font-weight: 100;
+            font-size: 35px;
+            text-transform: uppercase;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            span{
+                font-weight: 500;
+            }
+
+        }
+        .googleMap{
+            border:solid 2px red;
+            box-shadow: 0 0 40px 5px red ;
+            border-radius: 20px;
+            width: 100%;
+        }
+    }
+    
     
 }
 

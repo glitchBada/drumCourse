@@ -13,17 +13,30 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            .post-image{
-                width: 100%;
-                height: 250px;
+            .postTitle{
+                font-size: 35px;
+                color: red;
+                
             }
+            .imgandcontent{
+                display: flex;
+                // flex-wrap: wrap;
+
+
+                .post-image{
+                    height: 500px;
+                }
+                .post-content{
+                    margin-left: 50px;
+                    text-align: justify;
+                }
+            }
+            
             .post-date{
                 width: 100%;
                 text-align: end;
             }
-            .post-content{
-                text-align: justify;
-            }
+            
         }
     }
 }
