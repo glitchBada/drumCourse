@@ -7,6 +7,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = ('author_name', 'text', 'photo_url', 'created_at')
+        
 
     def get_photo_url(self, obj):
         if obj.photo:

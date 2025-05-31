@@ -29,7 +29,7 @@ const BlogPosts = () => {
             <div className="blog-container">
                 {posts.map(post => (
                     <div key={post.id} className="blog-post">
-                        <h2 className='postTitle'>{post.title}</h2>
+                        <div className='postTitle' dangerouslySetInnerHTML={{ __html: post.title }}/>
                         <div className='imgandcontent'>
                             {post.images && (
                                 <img 
@@ -38,9 +38,13 @@ const BlogPosts = () => {
                                     className="post-image"
                                 />
                             )}
-                            <p className="post-content">
+                            {/* <p className="post-content">
                                 {post.content}
-                            </p>
+                            </p> */}
+                            <div
+                                className="post-content"
+                                dangerouslySetInnerHTML={{ __html: post.content }}
+                            />                        
                         </div>
                         
                         <p className="post-date">

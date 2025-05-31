@@ -42,8 +42,3 @@ def post_detail(request, pk):
     elif request.method == 'DELETE':
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-#
-#
-# class BlogPostViewSet(viewsets.ModelViewSet):
-#     queryset = BlogPost.objects.all().order_by('-pub_date')
-#     serializer_class = BlogPostSerializer

@@ -13,23 +13,6 @@ import Var1 from '../../imgs/variant1.png'
 import Var2 from '../../imgs/variant2.png'
 import Var3 from '../../imgs/variant3.png'
 
-// interface FormData {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   phone: string;
-//   massege: string;
-//  }
-
-//  const ApplicationForm = () => {
-//   const [formData, setFormData] = useState<FormData>({
-//     firstName: '',
-//     lastName: '',
-//     email: '',
-//     phone: '',
-//     massege: ;
-//   });
-
 function FirstHomePage() {
     return (
       <>
@@ -77,7 +60,7 @@ function FirstHomePage() {
               <div className="imagesforpoints">
                 <img src={Disk} alt="" />
                 <div className="whytext">
-                  <h4>Фундаментальная база</h4>
+                  <h4>Базовые знания</h4>
                   <p>Вы научитесь нотной грамоте, правильной посадке за установкой, постановке рук и ног, базовым приемам игры.</p>
                 </div>
               </div>

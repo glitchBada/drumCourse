@@ -11,14 +11,12 @@ return (
     <>
         <div className="teacherspage">
             <div className="titleTeachers">
-                <h1>наши <span>педогоги</span></h1>
+                <h1>наши <span>педагоги</span></h1>
             </div>
             <div className="aboutteachers">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro, autem at eum ab quos?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fugit quam sapiente corporis iste accusantium, reprehenderit iure, voluptates unde facere fugiat et a.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Команда преподавателей нашей школы — это профессиональные барабанщики с большим концертным и студийным опытом. Каждый из них — не только практикующий музыкант, но и увлечённый педагог, способный делиться своими знаниями с учениками любого уровня.</p>
+                <p>Наши преподаватели владеют разными стилями и техниками игры: от попсы до метала. Они умеют адаптировать обучение под интересы и цели каждого ученика — будь то хобби, подготовка к поступлению в музыкальное учебное заведение или развитие профессиональных навыков.</p>
+                <p>Главное для нас — это индивидуальный подход. Наши преподаватели легко находят общий язык с детьми, подростками и взрослыми, создавая комфортную атмосферу на уроках и помогая каждому раскрыть свой музыкальный потенциал.</p>
             </div>
             <iframe src="https://www.youtube.com/embed/cLwTABgZvpM?si=qjmp538fW02G8Dej" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className="youtubeplayer"></iframe>
             <div className="cards">
