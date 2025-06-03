@@ -25,7 +25,7 @@ function App() {
               <Route path="/drum.music.stuf" element={<ProductList />} />
               <Route path="/product/:slug" element={<ProductDetail />} />
               <Route path="/category/:slug" element={<CategoryDetail />} />
-              <Route path='*' element={<Error404 />} />
+              <Route path="*" element={<Error404 />} />
               <Route path='/blog' element={<BlogPosts />} />
               <Route path='/teachers' element={<Teachers />} />
             </Routes>
