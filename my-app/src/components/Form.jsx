@@ -19,7 +19,7 @@ function FormforOrder() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        'http://192.168.43.61:8000/submit-application/',
+        'http://194.87.76.29:8000/submit-application/',
         formData,
         {
           headers: {

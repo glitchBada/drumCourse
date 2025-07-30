@@ -9,7 +9,7 @@ function NewProductsCarousel() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://192.168.43.61:8000/api/new-products/').then(res => setProducts(res.data));
+        axios.get('http://194.87.76.29:8000/api/new-products/').then(res => setProducts(res.data));
     }, []);
 
     const settings = {

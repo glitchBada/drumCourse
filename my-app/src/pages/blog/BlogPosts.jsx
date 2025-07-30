@@ -9,7 +9,7 @@ const BlogPosts = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await axios.get('http://192.168.43.61:8000/api/posts/');
+                const response = await axios.get('http://194.87.76.29:8000/api/posts/');
                 setPosts(response.data);
                 setLoading(false);
             } catch (error) {
@@ -33,7 +33,7 @@ const BlogPosts = () => {
                         <div className='imgandcontent'>
                             {post.images && (
                                 <img 
-                                    src={`http://192.168.43.61:8000${post.images}`} 
+                                    src={`http://194.87.76.29:8000/${post.images}`} 
                                     alt={post.title}
                                     className="post-image"
                                 />

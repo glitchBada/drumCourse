@@ -11,7 +11,7 @@ const ReviewsCarousel = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get('http://192.168.43.61:8000/reviews/api/reviews/');
+        const response = await axios.get('http://194.87.76.29:8000/reviews/api/reviews/');
         setReviews(response.data);
       } catch (error) {
         console.error('Ошибка загрузки отзывов:', error);

@@ -12,7 +12,7 @@ const CategoryDetail = () => {
   useEffect(() => {
     const fetchCategoryProducts = async () => {
       try {
-        const url = `http://192.168.43.61:8000/api/products/?category=${slug}`;
+        const url = `http://194.87.76.29:8000/api/products/?category=${slug}`;
         const response = await axios.get(url);
         console.log('Category Products:', response.data);
         setProducts(response.data);

@@ -188,7 +188,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://192.168.43.61:8000/api/categories/');
+        const response = await axios.get('http://194.87.76.29:8000/api/categories/');
         console.log('Categories:', response.data);
         setCategories(response.data);
       } catch (error) {
@@ -198,7 +198,7 @@ const ProductList = () => {
 
     const fetchBrands = async () => {
       try {
-        const response = await axios.get('http://192.168.43.61:8000/api/brands/');
+        const response = await axios.get('http://194.87.76.29:8000/api/brands/');
         console.log('Brands:', response.data);
         setBrands(response.data);
       } catch (error) {
@@ -221,7 +221,7 @@ const ProductList = () => {
         if (selectedBrand) queryParams.append('brand', selectedBrand);
         if (search) queryParams.append('search', search);
 
-        const url = `http://192.168.43.61:8000/api/products/?${queryParams.toString()}`;
+        const url = `http://194.87.76.29:8000/api/products/?${queryParams.toString()}`;
         const response = await axios.get(url);
         console.log('Products:', response.data);
         setProducts(response.data);

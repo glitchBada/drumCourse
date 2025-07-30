@@ -117,7 +117,7 @@ function ProductDetail() {
   const galleryRef = useRef(null);
 
   useEffect(() => {
-    axios.get(`http://192.168.43.61:8000/api/products/${slug}/`)
+    axios.get(`http://194.87.76.29:8000/api/products/${slug}/`)
       .then(res => {
         console.log('Product Data:', res.data);
         setProduct(res.data);
@@ -140,7 +140,7 @@ function ProductDetail() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://192.168.43.61:8000/api/apply/', {
+    axios.post('http://194.87.76.29:8000/api/apply/', {
       ...formData,
       product_name: product.name
     })
