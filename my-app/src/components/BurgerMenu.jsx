@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useAuth } from "../context/AuthContext";
 import "./BurgerMenu.scss"; // Подключаем SCSS стили
 
 const BurgerMenu = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { isAuthenticated, user } = useAuth();
 
     // Обработчик клика по бургеру
     const toggleMenu = () => {
@@ -31,6 +33,11 @@ const BurgerMenu = () => {
                 <li><a href="/teachers" onClick={closeMenu}>Педагоги</a></li>
                 <li><a href="/blog" onClick={closeMenu}>События</a></li>
                 <li><a href="/drum.music.stuf" onClick={closeMenu}>Интернет-Магазин DRUMROOM</a></li>
+                {isAuthenticated ? (
+                    <li><a href="/cabinet" onClick={closeMenu}>{user?.first_name || 'Кабинет'}</a></li>
+                ) : (
+                    <li><a href="/login" onClick={closeMenu}>Войти</a></li>
+                )}
             </ul>
         </>
     );

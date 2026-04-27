@@ -1,0 +1,188 @@
+.auth-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  background: #232323;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 440px;
+
+  h2 {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    span {
+      color: #e63946;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input {
+    background: #2e2e2e;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: #777;
+    }
+
+    &:focus {
+      border-color: #e63946;
+      outline: none;
+    }
+  }
+
+  button[type='submit'] {
+    background: #e63946;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    padding: 0.85rem;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    width: 100%;
+
+    &:hover:not(:disabled) {
+      background: #c1121f;
+    }
+
+    &:disabled {
+      background: #555;
+      cursor: default;
+    }
+  }
+
+  .auth-error {
+    background: rgba(230, 57, 70, 0.15);
+    border: 1px solid #e63946;
+    border-radius: 4px;
+    color: #ff6b6b;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .auth-success {
+    background: rgba(40, 167, 69, 0.15);
+    border: 1px solid #28a745;
+    border-radius: 4px;
+    color: #5cb85c;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .auth-footer {
+    color: #888;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    text-align: center;
+
+    a {
+      color: #e63946;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// OTP verification page
+.otp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.otp-block {
+  background: #2e2e2e;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 1rem;
+
+  label {
+    color: #aaa;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    text-align: center;
+  }
+
+  .resend-btn {
+    background: none;
+    border: none;
+    color: #e63946;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0;
+    text-decoration: underline;
+    width: 100%;
+    text-align: center;
+
+    &:disabled {
+      color: #555;
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+}
+
+.otp-status {
+  color: #aaa;
+  font-size: 0.85rem;
+  text-align: center;
+
+  .done {
+    color: #5cb85c;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .otp-grid {
+    grid-template-columns: 1fr;
+  }
+}

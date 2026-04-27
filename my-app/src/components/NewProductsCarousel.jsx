@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import axios from 'axios';
+import api from '../api/axios';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './NewProductsCarousel.scss'
@@ -9,7 +9,7 @@ function NewProductsCarousel() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://194.87.76.29:8000/api/new-products/').then(res => setProducts(res.data));
+        api.get('/api/new-products/').then(res => setProducts(res.data));
     }, []);
 
     const settings = {

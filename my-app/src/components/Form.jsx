@@ -1,78 +1,87 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import './Form.scss'
+import { useNavigate } from 'react-router-dom';
+import api from '../api/axios';
+import { useAuth } from '../context/AuthContext';
+import './Form.scss';
 
 function FormforOrder() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    phoneNumber: '',
-    email: '',
-    message: '',
-  });
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+    if (!isAuthenticated) {
+      navigate('/login', { state: { from: { pathname: '/home' } } });
+      return;
+    }
+
+    setError('');
+    setLoading(true);
     try {
-      const response = await axios.post(
-        'http://194.87.76.29:8000/submit-application/',
-        formData,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          }
-        }
+      await api.post('/api/applications/', { type: 'trial', message });
+      setSubmitted(true);
+      setMessage('');
+    } catch (err) {
+      const data = err.response?.data;
+      setError(
+        data?.detail ||
+        Object.values(data || {}).flat().join(' ') ||
+        'Ошибка отправки. Попробуйте позже.'
       );
-      console.log(response.data);
-      // Очистка формы после успешной отправки
-      setFormData({
-        firstName: '',
-        lastName: '',
-        phoneNumber: '',
-        email: '',
-        message: '',
-      });
-    } catch (error) {
-      console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
+
+  if (submitted) {
+    return (
+      <div className='Form'>
+        <h2>ЗАЯВКА <span>ОТПРАВЛЕНА</span></h2>
+        <p style={{ color: '#aaa', textAlign: 'center', padding: '1rem 0' }}>
+          Мы свяжемся с вами в ближайшее время.{' '}
+          <a href="/cabinet/orders" style={{ color: '#e63946' }}>Посмотреть заявки</a>
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className='Form'>
       <h2>СВЯЖИТЕСЬ <span>С НАМИ</span></h2>
+      {!isAuthenticated && (
+        <p style={{ color: '#aaa', textAlign: 'center', fontSize: '0.9rem', marginBottom: '1rem' }}>
+          Для записи необходима{' '}
+          <a href="/login" style={{ color: '#e63946' }}>авторизация</a>.
+        </p>
+      )}
+      {error && (
+        <p style={{ color: '#ff6b6b', textAlign: 'center', fontSize: '0.875rem', marginBottom: '0.75rem' }}>
+          {error}
+        </p>
+      )}
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            <input type="text" name="firstName" placeholder='Имя' value={formData.firstName} onChange={handleChange} required />
-          </label>
-        </div>
-        <div>
-          <label>
-            <input type="text" name="lastName" placeholder='Фамилия' value={formData.lastName} onChange={handleChange} required />
-          </label>
-        </div>
-        <div>
-          <label>
-            <input type="text" name="phoneNumber" placeholder='Телефон' value={formData.phoneNumber} onChange={handleChange} required />
-          </label>
-        </div>
-        <div>
-          <label>
-            <input type="email" name="email" placeholder='E-mail' value={formData.email} onChange={handleChange} required />
-          </label>
-        </div>
         <div className="textarea">
           <label>
-            <input type="text" name="message" placeholder='Ваше сообщение' value={formData.message} onChange={handleChange} required />
+            <input
+              type="text"
+              name="message"
+              placeholder='Ваше сообщение (необязательно)'
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
           </label>
         </div>
-        <button className='submitbutton' type="submit">Записаться на пробный урок</button>
+        <button className='submitbutton' type="submit" disabled={loading}>
+          {loading ? 'Отправка...' : 'Записаться на пробный урок'}
+        </button>
       </form>
     </div>
   );
 }
+
 export default FormforOrder;

@@ -1,6 +1,6 @@
 // CategoryDetail.js
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../api/axios';
 import { useParams, Link } from 'react-router-dom';
 import './CategoryDetail.scss'; // Стили для детальной страницы
 
@@ -12,8 +12,7 @@ const CategoryDetail = () => {
   useEffect(() => {
     const fetchCategoryProducts = async () => {
       try {
-        const url = `http://194.87.76.29:8000/api/products/?category=${slug}`;
-        const response = await axios.get(url);
+        const response = await api.get(`/api/products/?category=${slug}`);
         console.log('Category Products:', response.data);
         setProducts(response.data);
         // Устанавливаем название категории (в идеале получать из API)

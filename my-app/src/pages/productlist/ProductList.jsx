@@ -166,7 +166,7 @@
 // export default ProductList;
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../api/axios';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -188,7 +188,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://194.87.76.29:8000/api/categories/');
+        const response = await api.get('/api/categories/');
         console.log('Categories:', response.data);
         setCategories(response.data);
       } catch (error) {
@@ -198,7 +198,7 @@ const ProductList = () => {
 
     const fetchBrands = async () => {
       try {
-        const response = await axios.get('http://194.87.76.29:8000/api/brands/');
+        const response = await api.get('/api/brands/');
         console.log('Brands:', response.data);
         setBrands(response.data);
       } catch (error) {
@@ -221,8 +221,7 @@ const ProductList = () => {
         if (selectedBrand) queryParams.append('brand', selectedBrand);
         if (search) queryParams.append('search', search);
 
-        const url = `http://194.87.76.29:8000/api/products/?${queryParams.toString()}`;
-        const response = await axios.get(url);
+        const response = await api.get(`/api/products/?${queryParams.toString()}`);
         console.log('Products:', response.data);
         setProducts(response.data);
       } catch (error) {

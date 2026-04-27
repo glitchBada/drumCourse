@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import axios from 'axios';
+import api from '../api/axios';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './ReviewsCarrousel.scss'
@@ -11,7 +11,7 @@ const ReviewsCarousel = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get('http://194.87.76.29:8000/reviews/api/reviews/');
+        const response = await api.get('/reviews/api/reviews/');
         setReviews(response.data);
       } catch (error) {
         console.error('Ошибка загрузки отзывов:', error);
